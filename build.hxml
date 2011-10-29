@@ -1,0 +1,3 @@
+-js bin/WebGLTerrainicles.js
+-main Main.hx
+-cp src

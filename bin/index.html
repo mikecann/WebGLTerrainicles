@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>HaXe & WebGL</title>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="language" content="en" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />	
+	<link rel="stylesheet" type="text/css" href="main.css">				
+		
+	<script type="text/javascript" src="lib/jscolor/jscolor.js"></script>
+	
+</head>
+
+<body onload="main()">
+	
+	<script src="lib/DAT.GUI.js"></script>
+	<canvas id="canvas"></canvas>	
+	<script src="WebGLTerrainicles.js"></script>	
+	
+	<div style="position:absolute; right:5px; top:0px; zIndex:100;">
+		<h1 class="title">Terrainicles</h1>
+		<table>
+			<tr>
+				<td class="label"># Particles:</td>
+				<td><input id="numParticlesInp" type="text" /></td>
+			</tr>
+			<tr>
+				<td class="label">Particle Size:</td>
+				<td><input id="particleSizeInp" type="text" /></td>
+			</tr>
+			<tr>
+				<td class="label">Wall Friction:</td>
+				<td><input id="wallFrictionInp" type="text" /></td>
+			</tr>
+			<tr>
+				<td class="label">Gravity Strength:</td>
+				<td><input id="gravityStrength" type="text" /></td>
+			</tr>
+			<tr>
+				<td class="label">Start Color:</td>
+				<td><input id="startColor" class="color" type="text" /></td>
+			</tr>
+			<tr>
+				<td class="label">End Color:</td>
+				<td><input id="endColor" class="color" type="text" /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><button id="updateBtn" class="myButton" type="button">Update</button></td>
+			</tr>
+		</table>	
+	</div>
+	
+	<div style="position:absolute; left:5px; top:20px; zIndex:100;">
+		Use mouse to move about<br/>
+		Hold shift to spray particles<br/>
+		Hold ctrl to explode terrain
+	</div>
+	
+	<div style="position:absolute; left:5px; top:-2px; zIndex:100; background: black; color: white; padding: 2px; margin: 0px; font-size: 10px; height: 16px;">
+		<div id="framerate" />
+	</div>	
+		
+</body>
+</html>
